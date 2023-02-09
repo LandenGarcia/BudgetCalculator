@@ -1,3 +1,4 @@
+// Array of career options and their annual incomes as their values for making the dropdown menu:
 let careers = [
     [ '', 0],
     [ 'Accountant', 55650 ],
@@ -95,17 +96,33 @@ let careers = [
   }
 
   careerOptionList.addEventListener("input", () => {
+    // Use "let" and variable name, and equal to how it functions. For instance, ".value" means a career's annual income value from the array above.
     let annualIncome = parseInt(careerOptionList.value);
-    grossAnnualIncome.innerHTML = 'Gross Annual Income: $' + annualIncome;
-    let monthlyIncome = parseInt(careerOptionList.value);
-    grossMonthlyIncome.innerHTML = 'Gross Monthly Income (Gross Annual Income divided by 12): $' + annualIncome / 12;
+    // Displays a string and a number, using ".innerHTML".
+    // Text AFTER JavaScript calculation:
+    grossAnnualIncome.innerHTML = 'Gross Annual Income: $' + annualIncome.toFixed(2);
+    // Define monthlyIncome:
+    let monthlyIncome = annualIncome / 12;
+    // .toFixed(#) moves decimal point.
+    grossMonthlyIncome.innerHTML = 'Gross Monthly Income (Gross Annual Income divided by 12): $' + monthlyIncome.toFixed(2);
 
-    federalTaxes.innerHTML = 'Federal Taxes: Multiply by 0.12 = $' + monthlyIncome * 0.12;
-    stateTaxes.innerHTML = 'State Taxes: Multiply by 0.07 = $' + monthlyIncome * 0.07;
-    socialSecurity.innerHTML = 'Social Security: Multiply by 0.062 = $' + monthlyIncome * 0.062;
-    medicare.innerHTML = 'Medicare: Multiply by 0.0145 = $' + monthlyIncome * 0.0145;
-    stateDisability.innerHTML = 'State Disability: Multiply by 0.01 = $' + monthlyIncome * 0.01;
-    retirementInvestment.innerHTML = 'Retirement Investment: Multiply by 0.05 = $' + monthlyIncome * 0.05;
-    medicalInsurance.innerHTML = 'Medical Insurance: Add $180';
-    totalDeductions.innerHTML = 'Total Deductions: $' + federalTaxes + stateTaxes + socialSecurity + medicare + stateDisability + retirementInvestment + medicalInsurance;
+    // Calculates deductions from the monthly income:
+    let fedTax = monthlyIncome * 0.12;
+    let stateTax = monthlyIncome * 0.07;
+    let socialSec = monthlyIncome * 0.062;
+    let medic = monthlyIncome * 0.0145;
+    let stateDis = monthlyIncome * 0.01;
+    let retireInvest = monthlyIncome * 0.05;
+    let medicInsure = 180;
+    // Adds up all deductions:
+    let totalDeduct = fedTax + stateTax + socialSec + medic + stateDis + retireInvest + medicInsure;
+
+    federalTaxes.innerHTML = 'Federal Taxes: Multiply by 0.12 = $' + fedTax.toFixed(2);
+    stateTaxes.innerHTML = 'State Taxes: Multiply by 0.07 = $' + stateTax.toFixed(2);
+    socialSecurity.innerHTML = 'Social Security: Multiply by 0.062 = $' + socialSec.toFixed(2);
+    medicare.innerHTML = 'Medicare: Multiply by 0.0145 = $' + medic.toFixed(2);
+    stateDisability.innerHTML = 'State Disability: Multiply by 0.01 = $' + stateDis.toFixed(2);
+    retirementInvestment.innerHTML = 'Retirement Investment: Multiply by 0.05 = $' + retireInvest.toFixed(2);
+    medicalInsurance.innerHTML = 'Medical Insurance: Add $180.00';
+    totalDeductions.innerHTML = 'Total Deductions: $' + totalDeduct.toFixed(2);
   })

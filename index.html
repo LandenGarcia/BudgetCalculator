@@ -70,9 +70,9 @@
                 <p>$53,550.00</p>
                 <p>$56,700.00</p>
                 <p>$53,550.00</p>
-                <p>$49.350.00</p>
+                <p>$49,350.00</p>
                 <p>$50,400.00</p>
-                <p>$54.600.00</p>
+                <p>$54,600.00</p>
                 <p>$37,800.00</p>
                 <p>$54,600.00</p>
                 <p>$61,950.00</p>
@@ -82,7 +82,7 @@
                 <p>$56,700.00</p>
                 <p>$68,250.00</p>
                 <p>$51,450.00</p>
-                <p>$46.200.00</p>
+                <p>$46,200.00</p>
                 <p>$72,450.00</p>
                 <p>$48,300.00</p>
                 <p>$36,750.00</p>
@@ -191,12 +191,14 @@
             <p>Choose a career from the list above into the first blank, and will automatically calculate your monthly
                 income, deductions, house payment, and net monthly income.</p>
         </div>
+        <!-- Dropdown menu for selecting a career to calculate: -->
         <div class="career-select-dropdown">
             <label for="careers">Career Option:</label>
             <select name="careers" id="careers">
-                <!-- Filled by script -->
+                <!-- Filled by JavaScript -->
             </select>
         </div>
+        <!-- <p> elements have id's for JavaScript. -->
         <div class="career-select-income-annual">
             <p id="annualIncome">Gross Annual Income: $______</p>
         </div>
@@ -205,6 +207,7 @@
         </div>
     </section>
 
+    <!-- Deductions calculate payments from the Gross Monthly Income. -->
     <section class="deductions">
         <div class="deductions-text">
             <h2>Pay Period Deductions</h2>
@@ -236,15 +239,15 @@
         </div>
             <div class="divider"></div>
         <div class="deductions-medical-insurance">
-            <p id="medicalInsurance">Medical Insurance: Add $180</p>
+            <p id="medicalInsurance">Medical Insurance: Add $180.00</p>
         </div>
             <div class="divider"></div>
         <div class="deductions-total">
             <p id="totalDeductions">Total Deductions: $______</p>
         </div>
             <div class="divider"></div>
-
     </section>
+    
     <script src="scripts.js"></script>
 </body>
 </html>
