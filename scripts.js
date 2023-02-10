@@ -86,6 +86,8 @@ let careers = [
   const medicalInsurance = document.getElementById("medicalInsurance");
   const totalDeductions = document.getElementById("totalDeductions");
   
+const jobs = document.getElementById("jobs");
+
   // This is the code that does the stuff
   for (let job of careers) {
     let newOption = document.createElement('option');
