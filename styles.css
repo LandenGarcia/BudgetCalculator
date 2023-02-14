@@ -13,22 +13,19 @@ nav {
 nav > a {
     display: flex;
     justify-content: left;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
     padding: 10px;
     height: 4em;
 }
-.careers-list > div {
-    display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-}
 
-#example {
+.careers-list-1, .careers-list-2 {
     display: flex;
     flex-wrap: wrap;
 }
 
-#example p {
-    width: 50%;
+.careers-list p {
+    width: 25%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
