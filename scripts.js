@@ -86,7 +86,13 @@ let careers = [
   const medicalInsurance = document.getElementById("medicalInsurance");
   const totalDeductions = document.getElementById("totalDeductions");
   
-const jobs = document.getElementById("jobs");
+  const jobs = document.getElementById("jobs");
+
+  const withdrawalInput = document.getElementById("withdrawalText");
+  const depositInput = document.getElementById("depositText");
+  const balanceInput = document.getElementById("balanceText");
+
+  
 
   // This is the code that does the stuff
   for (let job of careers) {
